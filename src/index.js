@@ -69,3 +69,21 @@ function showError(show) {
   loader.style.display = 'none';
   catInfoDiv.style.display = 'none';
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  new SlimSelect({
+    select: '.breed-select',
+  });
+});
+
+function toggleLoader(show) {
+  loader.style.display = show ? 'block' : 'none';
+}
+
+function showError(show) {
+  if (show) {
+    Notiflix.Notify.Failure(
+      'Oops! Something went wrong! Try reloading the page!'
+    );
+  }
+}

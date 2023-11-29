@@ -75,15 +75,3 @@ document.addEventListener('DOMContentLoaded', () => {
     select: '.breed-select',
   });
 });
-
-function toggleLoader(show) {
-  loader.style.display = show ? 'block' : 'none';
-}
-
-function showError(show) {
-  if (show) {
-    Notiflix.Notify.Failure(
-      'Oops! Something went wrong! Try reloading the page!'
-    );
-  }
-}
